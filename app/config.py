@@ -1,0 +1,3 @@
+TIMEOUT_SECONDS = 30
+MAX_RETRIES = 3
+REGION = "us-east-1"
