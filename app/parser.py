@@ -1,4 +1,11 @@
 def parse(text: str) -> dict[str, str]:
     """Parse KEY=VALUE lines."""
-    pairs = (line.split('=', 1) for line in text.splitlines() if line)
-    return {k.strip(): v.strip() for k, v in pairs}
+    out: dict[str, str] = {}
+    for n, line in enumerate(text.splitlines(), 1):
+        if not line:
+            continue
+        if '=' not in line:
+            raise ValueError(f'line {n}: expected KEY=VALUE')
+        k, v = line.split('=', 1)
+        out[k.strip()] = v.strip()
+    return out
