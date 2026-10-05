@@ -2,4 +2,4 @@
 
 A tiny fake service used to demo [please-merge-my-pr](https://github.com/yoman321).
 
-Every pull reqest here is fake. They exist so the queue has something to rank.
+Every pull request here is fake. They exist so the queue has something to rank.
